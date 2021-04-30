@@ -1,0 +1,59 @@
+<style>
+    .image {
+        height: 35.5em;
+        background-size: 100% 100%;
+        width: 100%;
+        /*   height: auto;*/
+        background-image: url('assets/images/Love1.png');
+        background-position: 50% 50%;
+    }
+</style>
+
+<div class="image">
+    <table class="margins">
+        <tr class="font" *ngIf="prod!=null">
+            <td>
+                <img src="{{prod.photo}}" alt="img" height="250" width="auto" align="right">
+            </td>
+            <td>
+                <div class="contrainer" width = "500px">
+                    <div class="row">
+                        <div class="col-sm" align = "right"> Proizvod: </div>
+                        <div class="col-sm"> {{prod.name}} </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm" align = "right"> Cena: </div>
+                        <div class="col-sm"> {{prod.price}} rsd </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm" align = "right"> Opis: </div>
+                        <div class="col-sm"> {{prod.description}}  </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm" align = "right"> Upotreba: </div>
+                        <div class="col-sm"> {{prod.usage}} </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm"> {{msg}} </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr class="font" *ngIf="prod!=null">
+            <td>
+                <input type="number" name="num" class="btn" [(ngModel)]="order">
+            </td>
+            <td>
+                <button class="btn font" align = "center" (click)="addToCart()"> Dodaj u korpu </button>
+            </td>
+        </tr>
+        <tr *ngIf="prod!=null">
+            <td align="center" class="font">
+                {{this.msg}}
+            </td>
+        </tr>
+        <tr *ngIf="prod==null">
+            404 not found
+        </tr>
+    </table>
+</div>

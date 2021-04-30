@@ -1,0 +1,31 @@
+<style>
+    .image {
+        height: 39em;
+        background-size: 100% 100%;
+        width: 100%;
+        /*   height: auto;*/
+        background-image: url('assets/images/Love1.png');
+        background-position: 50% 50%;
+    }
+</style>
+
+<mat-toolbar>
+    <mat-toolbar-row #sidenav>
+<!--          <button mat-icon-button>
+            <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+        </button>
+
+        <span class="menu-spacer"></span>
+    -->
+        <div>
+            <a mat-button [routerLink]="['preview']"> Ponuda proizvoda </a>
+            <a mat-button [routerLink]="['cart']"> Korpa </a>
+            <a mat-button [routerLink]="['notifications']"> Obaveštenja </a>
+            <a mat-button [routerLink]="['editdata']"> Promena podataka </a>
+            <a mat-button [routerLink]="['logout']"> Izlogujte se </a>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>
+<div>
+    <router-outlet width="100%" margins="0" padding="0"></router-outlet>
+</div>

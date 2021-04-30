@@ -1,0 +1,52 @@
+<style>
+    .image {
+        height: 35.5em;
+        background-size: 100% 100%;
+        width: 100%;
+        /*   height: auto;*/
+        background-image: url('assets/images/Love1.png');
+        background-position: 50% 50%;
+
+    }
+</style>
+<div class="image">
+    <table class="font">
+        <tr *ngFor="let o of this.orders; let i=index">
+            <td>
+                Kupac: {{o.buyer.username}} <br>
+                {{o.buyer.first_name}} {{o.buyer.lastname}} <br>
+                {{o.buyer.address}}<br>
+                {{o.buyer.phone}}
+            </td>
+            <td>
+                <table>
+                    <tr *ngFor="let p of o.orders">
+                        <td>{{p.prod.name}} x{{p.quantity}}</td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <input type="date" class="font btn" name="date" [(ngModel)]="date">
+            </td>
+            <td>
+                <button class="font btn" (click)="accept(i)"> Odobri </button>
+            </td>
+            <td>
+                <button class="font btn" (click)="reject(i)"> Odbij </button>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <table>
+        <tr>
+            <td *ngIf="this.orders.length>0">
+                {{this.msg}}
+            </td>
+        </tr>
+        <tr *ngIf="this.orders.length==0">
+            <td class="font">
+                Nema novih porudžbina!
+            </td>
+        </tr>
+    </table>
+</div>

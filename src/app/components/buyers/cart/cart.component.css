@@ -1,0 +1,32 @@
+
+
+  body{
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  h1{
+    font-size: 20px;
+    color: #3b1c1c;
+    font-family: sans-serif;
+    text-align: center;
+  }
+
+  .font{
+    font-size: 20px;
+    color: #3b1c1c;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-left: 20px;
+  }
+
+  .btn{
+    border-radius: 2px;
+    border-width: 1px;
+    border-color: #3b1c1c;
+    background-color: #f5d2fc;
+  }
+
+  .cntr{
+    text-align: center;
+  }

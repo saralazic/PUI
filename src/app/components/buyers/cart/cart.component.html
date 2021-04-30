@@ -1,0 +1,49 @@
+<style>
+    .image {
+        height: 35.5em;
+        background-size: 100% 100%;
+        width: 100%;
+        /*   height: auto;*/
+        background-image: url('assets/images/Love1.png');
+        background-position: 50% 50%;
+
+    }
+</style>
+<div class="image">
+<table position="left" class="font">
+    <tr *ngFor="let p of this.user.cart; let i = index">
+        <td>
+            <img src="{{p.prod.photo}}" alt="img" height="120" width="auto" align="right">
+        </td>
+        <td>
+            {{p.prod.name}} &nbsp;&nbsp;
+            <br>
+            {{p.prod.price}} rsd &nbsp;&nbsp;
+        </td>
+        <td>
+            x{{p.quantity}} &nbsp;&nbsp;
+        </td>
+        <td>
+            <button class="btn font" (click)="outOfCart(i)">Izbaci</button>
+        </td>
+    </tr>
+    <tr *ngIf="this.user.cart.length>0">
+        <td>
+            Iznos: {{this.sum}}
+        </td>
+    </tr>
+    <tr *ngIf="this.user.cart.length>0">
+        <td>
+            <button class="btn font" (click)="setOrder()">Naruči</button>
+        </td>
+    </tr>
+    <tr *ngIf="this.user.cart.length==0">
+        <td class="font">
+            <br>
+            <br>
+            &nbsp;&nbsp;
+            Vaša korpa je prazna
+        </td>
+    </tr>
+</table>
+</div>

@@ -1,0 +1,76 @@
+<style>
+    .image {
+        height: 35.5em;
+        background-size: 100% 100%;
+        width: 100%;
+        /*   height: auto;*/
+        background-image: url('assets/images/Love1.png');
+        background-position: 50% 50%;
+    }
+</style>
+<div class="image">
+    <div class="container">
+        <br>
+        <br>
+        <div class="row font">
+            <div class="col-sm-2" align="right">Ime:</div>
+            <div class="col-sm-2">
+                <input type="text" name="fname" class="btn" [(ngModel)]="this.user.first_name">
+            </div>
+        </div>
+        <br>
+        <div class="row font">
+            <div class="col-sm-2" align="right">Prezime:</div>
+            <div class="col-sm-2">
+                <input type="text" name="lname" class="btn" [(ngModel)]="this.user.last_name">
+            </div>
+        </div>
+        <br>
+        <div class="row font">
+            <div class="col-sm-2" align="right">Telefon:</div>
+            <div class="col-sm-2">
+                <input type="text" name="phone" class="btn" [(ngModel)]="this.user.phone">
+            </div>
+        </div>
+        <br>
+        <div class="row font">
+            <div class="col-sm-2" align="right">Adresa:</div>
+            <div class="col-sm-2">
+                <input type="text" name="addr" class="btn" [(ngModel)]="this.user.address">
+            </div>
+        </div>
+        <br>
+        <div class="row font">
+            <div class="col-sm-2" align="right">Lozinka:</div>
+            <div class="col-sm-2">
+                <input type="password" name="pass1" class="btn" [(ngModel)]="this.user.password">
+            </div>
+        </div>
+        <br>
+        <div class="row font">
+            <div class="col-sm-2" align="right">Potvrda lozinke:</div>
+            <div class="col-sm-2">
+                <input type="password" name="pass2" class="btn" [(ngModel)]="this.newpass">
+            </div>
+        </div>
+        <br>
+
+        <div class="row font">
+            <div class="col-sm-2"> </div>
+            <div class="col-sm-2">
+                <div class="example-button-row">
+                    <button class="btn font" (click)="edit()"> Izmeni </button>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <div class="row font">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-10">
+                {{ this.mess }}
+            </div>
+
+        </div>
+    </div>
+</div>

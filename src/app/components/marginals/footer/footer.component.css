@@ -1,0 +1,16 @@
+.foot{
+    max-width: 100% !important;
+    font-size: 10px;
+    font-weight: bold;
+    color: #3b1c1c;
+    background-color: #b790ac;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-right: 0;
+    margin-right: 0;
+}
+
+.center{
+    text-align: center;
+}

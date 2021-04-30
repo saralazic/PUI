@@ -1,0 +1,18 @@
+.font{
+    font-size: 18px;
+    color: #3b1c1c;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: left;
+    align-items: left;
+  }
+
+.margins{
+    margin-left: 0px;
+}
+
+.align{
+    text-align: left;
+   
+}
+

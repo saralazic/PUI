@@ -1,0 +1,26 @@
+<style>
+    .noscroll {
+        overflow-y: hidden;
+    }
+</style>
+<div class="noscroll">
+    <mat-toolbar>
+        <mat-toolbar-row #sidenav>
+  <!--          <button mat-icon-button>
+                <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+            </button>
+ 
+            <span class="menu-spacer"></span>
+        -->
+            <div>
+                <a mat-button [routerLink]="['orders']"> Porudžbine </a>
+                <a mat-button [routerLink]="['preview']"> Ponuda proizvoda </a>
+                <a mat-button [routerLink]="['newproduct']"> Dodaj nov proizvod </a>
+                <a mat-button [routerLink]="['editdata']"> Promena podataka </a>
+                <a mat-button [routerLink]="['logout']"> Izlogujte se </a>
+            </div>
+        </mat-toolbar-row>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+
+</div>

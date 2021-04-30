@@ -1,0 +1,36 @@
+<style>
+    .image {
+        /*height: 28em;*/
+        background-size: 100% 100%;
+        width: 100%;
+        /*   height: auto;*/
+        background-image: url('assets/images/Love1.png');
+        background-position: 50% 50%;
+    }
+</style>
+<div class="font margins image">
+        <table position="left">
+            <tr *ngFor="let p of prod">
+                <td>
+                    <img src="{{p.first.photo}}" alt="img" height="120" width="auto" align="right"
+                        (click)="showDetails(p.first.id)">
+                </td>
+                <td>
+                    {{p.first.name}}
+                    <br>
+                    {{p.first.price}} rsd
+                </td>
+
+                <td *ngIf="p.second!=null">
+                    <img src="{{p.second.photo}}" alt="img" height="120" width="auto" align="right"
+                        (click)="showDetails(p.second.id)">
+                </td>
+                <td *ngIf="p.second!=null">
+                    {{p.second.name}}
+                    <br>
+                    {{p.second.price}} rsd
+                </td>
+
+            </tr>
+        </table>
+</div>

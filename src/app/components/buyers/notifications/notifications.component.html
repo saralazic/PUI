@@ -1,0 +1,27 @@
+<style>
+    .image {
+        height: 35.5em;
+        background-size: 100% 100%;
+        width: 100%;
+        /*   height: auto;*/
+        background-image: url('assets/images/Love1.png');
+        background-position: 50% 50%;
+
+    }
+</style>
+<div class="image">
+    <table class="font">
+        <tr *ngFor="let n of this.user.notifications;
+     let i = index">
+            <td>
+                {{n}}
+            </td>
+            <td>
+                <button class="font btn" (click)="delNot(i)"> Izbriši </button>
+            </td>
+        </tr>
+        <tr *ngIf="this.user.notifications.length==0">
+            Nema obaveštenja!
+        </tr>
+    </table>
+</div>

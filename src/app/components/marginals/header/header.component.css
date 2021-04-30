@@ -1,0 +1,33 @@
+.navbarstyle{
+    font-size: 75;
+    font-family: sans-serif;
+    font-weight: bolder;
+    color: #3b1c1c;
+    background-color: #b790ac;
+    height: 75px;
+    margin: 0px;
+    width: 100% !important;
+    left: 0px;
+    right: 0px;
+}
+
+.headline{
+    width: 100% !important;
+    top:20px;
+    font-size: 42px;
+    font-weight: bolder;
+    color: #3b1c1c;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+div.absolute{
+    top: -5px;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    margin-right: 0;
+    margin: 0px;
+    padding-right: 0;
+    padding: 0px;
+}

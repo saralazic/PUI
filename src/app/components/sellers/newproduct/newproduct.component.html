@@ -1,0 +1,80 @@
+<style>
+    .image {
+        height: 35.5em;
+        background-size: 100% 100%;
+        width: 100%;
+        /*   height: auto;*/
+        background-image: url('assets/images/Love1.png');
+        background-position: 50% 50%;
+
+    }
+</style>
+
+<div class="image">
+    <table class="font">
+        <tr>
+            <td class="font">
+                Odaberite sliku:
+                <table>
+                    <tr>
+                        <td *ngFor="let p of this.photos">
+                            <input type="radio" id={{p}} name="photo" value={{p}} [(ngModel)]="this.prod.photo">
+                            <label for={{p}}>
+                                <img src="{{p}}" alt="img" height="150" width="auto">
+                            </label>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <table class="font">
+        <tr>
+            <td align="right">
+                Ime proizvoda:
+            </td>
+            <td>
+                <input type="text" name="pname" class="btn font" [(ngModel)]="this.prod.name">
+            </td>
+        </tr>
+        <tr>
+            <td align="right">
+                Cena:
+            </td>
+            <td>
+                <input type="number" name="price" class="btn font" [(ngModel)]="this.prod.price">
+            </td>
+        </tr>
+        <tr>
+            <td align="right">
+                Opis:
+            </td>
+            <td>
+                <input type="text" name="descr" class="btn font" [(ngModel)]="this.prod.description">
+            </td>
+        </tr>
+        <tr>
+            <td align="right">
+                Način korišćenja:
+            </td>
+            <td>
+                <input type="text" name="usage" class="btn font" [(ngModel)]="this.prod.usage">
+            </td>
+        </tr>
+        <tr>
+            <td>
+
+            <td>
+                <button class="btn font" (click)="addProduct()"> Dodaj </button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+
+            </td>
+            <td class="font">
+                {{this.msg}}
+            </td>
+        </tr>
+    </table>
+</div>
